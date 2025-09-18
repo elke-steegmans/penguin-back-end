@@ -35,6 +35,12 @@ public class UserRestController {
         return userService.getAllUsers();
     }
 
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello Penguin!";
+    }
+
+
     @PostMapping()
     public User addUser(@Valid @RequestBody User user) {
         return userService.addUser(user);
