@@ -20,7 +20,7 @@ import be.ucll.service.UserService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/players")
 @CrossOrigin(origins = "http://localhost:8000")
 public class UserRestController {
 
@@ -34,12 +34,6 @@ public class UserRestController {
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
-
-    @GetMapping("/hello")
-    public String hello() {
-        return "Hello Penguin!";
-    }
-
 
     @PostMapping()
     public User addUser(@Valid @RequestBody User user) {
